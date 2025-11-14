@@ -141,6 +141,10 @@ body {
   flex: 3; /* Makes the text take up more space */
 }
 
+.about-us-text p {
+  font-size: 32px;
+}
+
 .about-us-container h2 {
   font-size: 28px;
   margin-bottom: 10px;
