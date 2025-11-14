@@ -1,0 +1,380 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+* {
+  box-sizing: border-box; /* Ensure padding and borders are included in the width */
+  margin: 0;
+  padding: 0;
+}
+
+  /* Container for the image and navbar */
+.navbar-container {
+  position: relative; 
+  max-width: 1300px;  
+  min-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Half-image that the navbar overlays */
+.header-image {
+  width: 100%; /* Full width of the navbar length */
+  height: 300px; /* You can adjust the height of the image */
+  object-fit: cover; /* Ensures the image scales nicely */
+}
+
+/* Transparent navigation bar overlay */
+.navbar {
+  display: flex;
+  flex-wrap: wrap; /* Allows content to wrap if necessary */
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(171, 166, 166, 0.65); /* Semi-transparent dark background */
+  color: white;
+  position: absolute; /* Position it on top of the image */
+  top: 0;
+  width: 100%; /* Full width relative to the container */
+  z-index: 10; /* Ensures the navbar appears above the image */
+  height: 70px;
+}
+
+.title-overlay {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "toppan-bunkyu-midashi-go-std", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: clamp(64px, 6vw, 68px);
+  color: black;
+  text-align: center;
+  z-index: 20;
+}
+
+.navbar-items {
+  display: flex;
+  gap: 15px; /* Adds space between navbar links */
+  margin-left: auto; /* Pushes the navbar links to the right */
+  justify-content: flex-end;
+}
+
+.navbar-logo img {
+  height: 100%; /* Make the logo match the full height of the navbar */
+  max-height: 70px; /* Ensure it doesn’t exceed the navbar height */
+  width: auto; /* Maintain aspect ratio so it doesn't stretch */
+  object-fit: contain; /* Ensure it fits well inside the space */
+}
+
+.navbar-logo {
+  padding-left: 10px; /* Adds 10px of space on the left */
+}
+
+.navbar-divider {
+  border-left: 2px solid black; /* Creates a vertical line */
+  height: 60%; /* Adjust this as needed */
+  margin: 0 10px; /* Adds spacing around the line */
+}
+
+/* Default navbar title style */
+.navbar-title {
+  font-size: 25px;
+  font-weight: 600;
+  margin-left: 10px;
+  color: black;
+  white-space: nowrap;
+  display: block; /* Ensure it's visible by default */
+}
+
+/* Media query: Hide the title when the screen width is less than 800px */
+@media (max-width: 1200px) {
+  .navbar-title {
+    display: none; /* Hide the title */
+  }
+}
+
+.navbar-box {
+  background-color: rgb(252, 250, 250); /* White background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 10px 20px; /* Adds internal spacing */
+  display: flex; /* Flex to align tags horizontally */
+  gap: 20px; /* Adds space between tags */
+  height: 40px; /* Shorter height compared to the navbar */
+  align-items: center; /* Vertically centers tags */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-left: auto; /* Pushes the container to the right */
+  margin-right: 15px; /* Adds a small space from the right edge */
+}
+
+.navbar-tag {
+  color: black; /* Black text */
+  text-decoration: none; /* Removes underline */
+  padding: 5px 15px; /* Adds padding inside the clickable tag */
+  font-weight: 600;
+  transition: background-color 0.3s ease; /* Adds hover effect */
+}
+
+
+
+
+
+
+.about-us-container {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 1300px;  
+  min-width: 1000px;
+  margin: 10px auto;
+  border-left: 5px solid #15161780;
+}
+
+.about-us-content {
+  display: flex; /* Flexbox for horizontal layout */
+  gap: 100px; /* Adds space between the text and the image */
+  align-items: flex-start; /* Aligns the text and image at the top */
+}
+
+.about-us-text {
+  flex: 3; /* Makes the text take up more space */
+}
+
+.about-us-container h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-align: justify;
+  color: #333;
+}
+
+.about-us-container p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+  text-align: justify;
+}
+
+.professor-image-container {
+  flex: 1; /* Ensures the image container takes up less space */
+}
+
+.professor-image {
+  width: 100%; /* Takes full width of the container */
+  max-width: 300px; /* Limits the maximum size of the image */
+  height: auto; /* Maintains the aspect ratio */
+  border-radius: 10px; /* Adds rounded corners to the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the image */
+}
+
+.social-icons {
+  display: flex; /* Align the icons horizontally */
+  justify-content: center; /* Center the icons underneath the image */
+  gap: 15px; /* Adds space between the icons */
+  margin-top: 15px; /* Adds some space between the image and icons */
+  margin-right: 19px;
+}
+
+.social-icon {
+  width: 50px; /* Size of the circle button */
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Makes the icon circular */
+  background-color: white; /* Background color for the circle */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adds hover effect */
+}
+
+.social-icon img {
+  width: 70%; /* Make the icon fit nicely inside the circle */
+  height: auto;
+}
+
+.social-icon:hover {
+  transform: scale(1.1); /* Slight zoom-in effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+
+
+
+
+
+.section-bar-container {
+  position: relative; 
+  max-width: 1300px;  
+  min-width: 1000px;
+  margin: 10px auto;
+  margin-top: 50px;
+}
+
+.section-header-image {
+  width: 100%; /* Full width of the navbar length */
+  height: 100px; /* You can adjust the height of the image */
+  object-fit: cover; /* Ensures the image scales nicely */
+}
+
+.section_title-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "toppan-bunkyu-midashi-go-std", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: clamp(32px, 6vw, 40px);
+  color: black;
+  text-align: center;
+  z-index: 20;
+}
+
+
+
+
+
+
+.people-container {
+  background-color: rgba(254, 253, 253, 0.995);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 1300px;  
+  min-width: 1000px;
+  margin: 10px auto;
+  display: flex;
+  flex-wrap: wrap; /* Enable rows for multiple items */
+  gap: 20px; /* Add spacing between items */
+  justify-content: flex-start; /* Center-align the grid */
+  border-left: 5px solid #15161780;
+}
+
+.people-item {
+  flex: 1 1 calc(25% - 20px); /* 4 items per row, accounting for gap */
+  max-width: calc(25% - 20px); /* 4 items per row */
+  text-align: center; /* Center the content inside */
+}
+
+.person-image {
+  width: 100%; /* Make the image responsive */
+  max-width: 150px; /* Limit the maximum width of the headshot */
+  height: auto; /* Maintain aspect ratio */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the image */
+}
+
+.person-name {
+  margin-top: 10px; /* Space between image and name */
+  font-size: 16px; /* Adjust font size */
+  font-weight: bold; /* Emphasize the name */
+  color: #333; /* Dark text color */
+}
+
+.profile-link {
+  text-decoration: none; /* Remove underline */
+  color: #034790; /* Add link color */
+  transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+.profile-link:hover {
+  color: #0056b3; /* Darker color on hover */
+}
+
+
+
+
+
+
+/* Publications Section */
+
+/* Ensure .pub-container expands to fit the floated image */
+.pub-container::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.pub-container {
+  max-width: 1300px;
+  min-width: 1000px;
+  margin: 10px auto;
+  background-color: rgba(254, 253, 253, 0.995);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-left: 5px solid #15161780;
+  gap: 20px; /* Space between image and text */
+
+  h1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #034790;
+    margin-bottom: 15px;
+
+    a {
+      color: #034790;
+    }
+  }
+
+  h2 {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;   
+  }
+
+  p {
+    text-align: justify;
+    line-height: 1.6;
+
+    hl {
+      text-align: justify;
+      background-color: rgba(206, 126, 5, 0.445);
+      line-height: 1.6;
+    } /* To highlight some text */
+  }
+}
+
+/* Image - Ensures Text Wraps */
+.pub-image {
+  width: 300px; /* Set a reasonable size */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  float: left;
+  margin-right: 15px;
+}        
+
+/* Keywords Section */
+.pub-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Individual Keyword Styling */
+.pub-keyword {
+  background-color: #eef0f2;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.toggle-abstract {
+  color: #034790;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.toggle-abstract:hover {
+  text-decoration: underline;
+}
+
+/* TODO！！！！！！！ */
+/* Another section maybe, like alumni and contact */
+/* make the pub image clickable */
+/* make the people image clickable */
