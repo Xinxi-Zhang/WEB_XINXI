@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Xinxi Zhang</title>
   <!-- Link to CSS -->
+  <link rel="stylesheet" href="https://use.typekit.net/ujq0ydv.css">
   <link rel="stylesheet" href="style.css">
   <script>
     (function(d) {
@@ -28,128 +29,32 @@
   <!-- ************* Header Section ************************** -->
   <!-- ******************************************************* -->
   <div class="navbar-container">
-    <!-- Half-image that the navbar will overlay -->
-    <img src="data/images/header.jpg" alt="Header Image" class="header-image">
-
-    <!-- Title Section -->
-    <div class="title-overlay">
-      Xinxi Zhang
-    </div>
-
-    <!-- Navigation Bar -->
-    <div class="navbar">
-        <!-- Logo Section -->
-        <div class="navbar-title-kai">
-          熹
-        </div>
-
-        <div class="navbar-divider"></div>
-
-        <!-- Lab Title -->
-        <div class="navbar-title">
-          Xinxi Zhang
-        </div>
-
-        <!-- The Actual Navi Bar -->
-        <div class="navbar-box">
-          <!-- Tags (Clickable Menu Items) -->
-          <a href="#home" class="navbar-tag">Home</a>
-          <a href="#research" class="navbar-tag">Slected Publications</a>
-        </div>
-    </div>
+  <img src="data/images/header.jpg" alt="Header Image" class="header-image">
   </div>
 
-
-
-  <!-- ******************************************************* -->
-  <!-- ************* About Us Section ************************ -->
-  <!-- ******************************************************* -->
-  <div id="about" class="about-us-container">
-    <div class="about-us-content">
-      <div class="about-us-text">
-        <h2>About me</h2>
-        <p>
-          Hello, I am Xinxi Zhang, a PhD student in the Department of Computer Science at Rutgers University, advised by 
-          <a href="https://www.cs.rutgers.edu/~vladimir/">Prof. Vladimir Pavlovic</a>. 
-          Echoing Richard Feynman’s belief that “what I cannot create, I do not understand,” 
-          I work at the intersection of generative modeling and computer vision, 
-          with a current focus on building more efficient diffusion and flow-based models for visual generation.
-        </p>
-      </div>
-      <div class="professor-image-container">
-        <img src="data/images/people/xinxi.jpeg" alt="Professor" class="professor-image">
-        <div class="social-icons">
-          <!-- Email Button -->
-          <a href="mailto:xinxi.zhang@rutgers.edu" class="social-icon">
-            <img src="data/images/icons/email.png" alt="Email">
-          </a>
-          <!-- LinkedIn Button -->
-          <a href="https://www.linkedin.com/in/xinxi-zhang-002974237/" class="social-icon" target="_blank">
-            <img src="data/images/icons/linkedin.png" alt="LinkedIn">
-          </a>
-          <!-- Google Scholar Button -->
-          <a href="https://scholar.google.com/citations?user=08KI_O0AAAAJ&hl=en" class="social-icon" target="_blank">
-            <img src="data/images/icons/googlescholar.png" alt="Google Scholar">
-          </a>
-        </div>
-      </div>
-    </div>
+  <div class="links-container">
+    <nav class="hero-links">
+      <a href="https://scholar.google.com/citations?user=08KI_O0AAAAJ&hl=en" target="_blank">GOOGLE SCHOLAR</a>
+      <a href="https://www.linkedin.com/in/xinxi-zhang-002974237/" target="_blank">CV</a>
+      <a href="mailto:xinxi.zhang@rutgers.edu">EMAIL</a>
+      <a href="https://www.linkedin.com/in/xinxi-zhang-002974237/" target="_blank">LINKEDIN</a>
+    </nav>
   </div>
 
-
-  <!-- ******************************************************* -->
-  <!-- ************* Pub Section ***************************** -->
-  <!-- ******************************************************* -->
-  <div id="research" class="section-bar-container">
-    <img src="data/images/pub_header.jpg" alt="Section Image" class="section-header-image">
-    <div class="section_title-overlay">
-      Research Projects
-    </div>
-  </div>
-
+  <section class="about-section" id="about">
+    <!-- <div class="about-label">ABOUT ME</div> -->
   
-  <!-- ********************************* -->
-  <!-- **** Publication 2 SODA ********* -->
-  <!-- ********************************* -->
-  <div class="pub-container">
-    <img src="data/images/pubs/soda.png" alt="Sample Image" class="pub-image" width="200">
-    
-    <h1>
-        <a href="https://arxiv.org/pdf/2405.21050" target="_blank" rel="noopener noreferrer">
-          SODA: Spectrum-Aware Parameter-Efficient Fine-Tuning for Diffusion Models
-        </a>
-    </h1>
-    
-    <h2>Xinxi Zhang*, Song Wen*, Ligong Han*†, Felix Juefei-Xu, Akash Srivastava, Junzhou Huang, Hao Wang, Molei Tao, Vladimir Pavlovic, Dimitris Metaxas</h2>
-    
-    <!-- TL;DR Version -->
-    <p class="abstract short-abstract">
-        <hl>TL;DR:</hl> A framework for parameter-efficient fine-tuning by adjusting both singular values and their basis vectors, balancing computational efficiency and representation capacity.
-        <span class="toggle-abstract show-full">(Show Full Abstract)</span>
+    <p class="about-text">
+      <span class="dropcap">H</span>ello, I am Xinxi Zhang, a PhD student in the Department of
+      Computer Science at Rutgers University, advised by
+      <a href="https://www.cs.rutgers.edu/~vladimir/" target="_blank">
+        Prof. Vladimir Pavlovic
+      </a>. Echoing Richard Feynman’s belief that “what I cannot create,
+      I do not understand,” I work at the intersection of generative
+      modeling and computer vision, with a current focus on building more
+      efficient diffusion and flow-based models for visual generation.
     </p>
-
-    <!-- Full Abstract (Initially Hidden) -->
-    <p class="abstract full-abstract" style="display: none;">
-      Adapting large-scale pre-trained generative models in a parameter-efficient manner
-      is gaining traction. Traditional methods like low rank adaptation achieve parameter
-      efficiency by imposing constraints but may not be optimal for tasks requiring
-      high representation capacity. <hl>We propose a novel spectrum-aware adaptation
-      framework for generative models. Our method adjusts both singular values and
-      their basis vectors of pretrained weights.</hl> Using the Kronecker product and efficient
-      Stiefel optimizers, we achieve parameter-efficient adaptation of orthogonal matrices.
-      Specifically, we introduce Spectral Orthogonal Decomposition Adaptation (SODA),
-      which balances computational efficiency and representation capacity. Extensive
-      evaluations on text-to-image diffusion models demonstrate SODA’s effectiveness,
-      offering a spectrum-aware alternative to existing fine-tuning methods.
-        <span class="toggle-abstract show-tldr" style="display: none;">(Show TL;DR)</span>
-    </p>
-
-    <div class="pub-keywords">
-        <span class="pub-keyword">Parameter Efficient Finetuning</span>
-        <span class="pub-keyword">Diffusion Models</span>
-        <span class="pub-keyword">WACV 2025</span>
-    </div>
-  </div>
+  </section>
   
 
 </body>

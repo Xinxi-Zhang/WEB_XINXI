@@ -2,7 +2,15 @@
 /*########################### FONTS ################  */
 /*################################################## */
 @font-face {
-  font-family: 'mykai';
+  font-family: 'trajen';
+  src: url('/data/fonts/Trajan.ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'kai';
   src: url('/data/fonts/kai.ttf');
   font-weight: normal;
   font-style: normal;
@@ -23,199 +31,100 @@ body {
   /* Container for the image and navbar */
 .navbar-container {
   position: relative; 
-  max-width: 1300px;  
+  max-width: 1000px;  
   min-width: 1000px;
+  min-height: 400px;
   margin: 0 auto;
 }
 
 /* Half-image that the navbar overlays */
 .header-image {
+  margin-top: 55px;
   width: 100%; /* Full width of the navbar length */
-  height: 300px; /* You can adjust the height of the image */
   object-fit: cover; /* Ensures the image scales nicely */
-  opacity: 0.6; /* Set opacity to make the image semi-transparent */
 }
 
-/* Transparent navigation bar overlay */
-.navbar {
-  display: flex;
-  flex-wrap: wrap; /* Allows content to wrap if necessary */
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgba(171, 166, 166, 0.65); /* Semi-transparent dark background */
-  color: white;
-  position: absolute; /* Position it on top of the image */
-  top: 0;
-  width: 100%; /* Full width relative to the container */
-  z-index: 10; /* Ensures the navbar appears above the image */
-  height: 70px;
-}
-
-.title-overlay {
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: "Times New Roman", "STKaiti";
-  font-weight: 100;
-  font-style: normal;
-  font-size: clamp(64px, 6vw, 68px);
-  color: black;
-  text-align: center;
-  z-index: 20;
-}
-
-.navbar-items {
-  display: flex;
-  gap: 15px; /* Adds space between navbar links */
-  margin-left: auto; /* Pushes the navbar links to the right */
-  justify-content: flex-end;
-}
-
-.navbar-logo img {
-  height: 100%; /* Make the logo match the full height of the navbar */
-  max-height: 70px; /* Ensure it doesn’t exceed the navbar height */
-  width: auto; /* Maintain aspect ratio so it doesn't stretch */
-  object-fit: contain; /* Ensure it fits well inside the space */
-}
-
-.navbar-logo {
-  padding-left: 10px; /* Adds 10px of space on the left */
-}
-
-.navbar-divider {
-  border-left: 3px solid black; /* Creates a vertical line */
-  height: 55%; /* Adjust this as needed */
-  margin: 0 10px; /* Adds spacing around the line */
-}
-
-/* Default navbar title style */
-.navbar-title {
-  font-family: "Times New Roman";
-  font-size: 25px;
-  font-weight: 900;
-  margin-top: 5px;
-  margin-left: 0px;
-  color: black;
-  white-space: nowrap;
-  display: block; /* Ensure it's visible by default */
-}
-
-.navbar-title-kai {
-  font-family: "STKaiti";
-  font-weight: 900;
-  font-style: bold;
-  font-size: 40px;
-  color: black;
-  white-space: nowrap;
-  margin-left: 15px;
-  margin-right: 0px;
-  margin-bottom: 5px;
-}
-/* Media query: Hide the title when the screen width is less than 800px */
-@media (max-width: 1200px) {
-  .navbar-title {
-    display: none; /* Hide the title */
-  }
-}
-
-.navbar-box {
-  background-color: rgba(252, 250, 250, 0.66); /* Semi-transparent white background */
-  font-family: "Times New Roman";
-  font-weight: 900;
-  font-size: 20px;
-  padding: 10px 20px; /* Adds internal spacing */
-  display: flex; /* Flex to align tags horizontally */
-  gap: 20px; /* Adds space between tags */
-  height: 40px; /* Shorter height compared to the navbar */
-  align-items: center; /* Vertically centers tags */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  margin-left: auto; /* Pushes the container to the right */
-  margin-right: 15px; /* Adds a small space from the right edge */
-}
-
-.navbar-tag {
-  color: black; /* Black text */
-  text-decoration: none; /* Removes underline */
-  padding: 5px 15px; /* Adds padding inside the clickable tag */
-  font-weight: 600;
-  transition: background-color 0.3s ease; /* Adds hover effect */
-}
-
-.about-us-container {
-  background-color: white;
-  padding: 20px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  max-width: 1300px;  
+.links-container {
+  position: relative; 
+  max-width: 1000px;  
   min-width: 1000px;
-  margin: 10px auto;
-  border-left: 5px solid #15161780;
+  margin: 0 auto;
 }
 
-.about-us-content {
-  display: flex; /* Flexbox for horizontal layout */
-  gap: 100px; /* Adds space between the text and the image */
-  align-items: flex-start; /* Aligns the text and image at the top */
-}
-
-.about-us-text {
-  flex: 3; /* Makes the text take up more space */
-}
-
-.about-us-text p {
-  text-align: justify;
-  font-size: 20px;
-  font-family: "Times New Roman";
-  font-weight: 400;
-}
-
-.about-us-container h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-  text-align: justify;
-  color: #333;
-}
-
-.professor-image-container {
-  flex: 1; /* Ensures the image container takes up less space */
-}
-
-.professor-image {
-  width: 100%; /* Takes full width of the container */
-  max-width: 300px; /* Limits the maximum size of the image */
-  height: auto; /* Maintains the aspect ratio */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the image */
-}
-
-.social-icons {
-  display: flex; /* Align the icons horizontally */
-  justify-content: center; /* Center the icons underneath the image */
-  gap: 15px; /* Adds space between the icons */
-  margin-top: 15px; /* Adds some space between the image and icons */
-  margin-right: 19px;
-}
-
-.social-icon {
-  width: 50px; /* Size of the circle button */
-  height: 50px;
+.hero-links {
+  margin-top: 2.5rem;
   display: flex;
-  align-items: center;
   justify-content: center;
-  background-color: white; /* Background color for the circle */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adds hover effect */
+  gap: 2.5rem;                 /* space between items */
+  font-family: "trajan-pro-3", serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-.social-icon img {
-  width: 70%; /* Make the icon fit nicely inside the circle */
-  height: auto;
+.hero-links a {
+  color: #000;
+  text-decoration: underline;
+  font-size: 23px;
+  font-family: "trajan-pro-3", serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
-.social-icon:hover {
-  transform: scale(1.1); /* Slight zoom-in effect on hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+.hero-links a:hover {
+  opacity: 0.7;                /* subtle hover effect */
 }
 
+
+.about-section {
+  max-width: 950px;
+  margin: 4rem auto 0;          /* space below header/links */
+  font-family: "Times New Roman", Georgia, serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* "ABOUT ME" box */
+.about-label {
+  display: inline-block;
+  padding: 0.4rem 1.8rem;
+  border: 2px solid #000;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  margin-bottom: 1.8rem;
+}
+
+/* paragraph text */
+.about-text {
+  text-align: justify;
+  font-family: "adobe-garamond-pro", serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1.3rem;
+}
+
+/* drop cap first letter */
+.dropcap {
+  font-family: "trajan-pro-3", serif;
+  font-weight: 100;
+  float: left;
+  font-size: 3.2rem;
+  line-height: 0.2;
+  font-weight: 100;
+}
+
+/* links inside about text */
+.about-text a {
+  color: #000;
+  font-family: "Didot";
+  text-decoration: underline;
+}
+.about-text a:hover {
+  opacity: 0.75;
+}
 
 
 
@@ -248,55 +157,6 @@ body {
   color: black;
   text-align: center;
   z-index: 20;
-}
-
-
-
-
-
-
-.people-container {
-  background-color: rgba(254, 253, 253, 0.995);
-  padding: 20px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  max-width: 1300px;  
-  min-width: 1000px;
-  margin: 10px auto;
-  display: flex;
-  flex-wrap: wrap; /* Enable rows for multiple items */
-  gap: 20px; /* Add spacing between items */
-  justify-content: flex-start; /* Center-align the grid */
-  border-left: 5px solid #15161780;
-}
-
-.people-item {
-  flex: 1 1 calc(25% - 20px); /* 4 items per row, accounting for gap */
-  max-width: calc(25% - 20px); /* 4 items per row */
-  text-align: center; /* Center the content inside */
-}
-
-.person-image {
-  width: 100%; /* Make the image responsive */
-  max-width: 150px; /* Limit the maximum width of the headshot */
-  height: auto; /* Maintain aspect ratio */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the image */
-}
-
-.person-name {
-  margin-top: 10px; /* Space between image and name */
-  font-size: 16px; /* Adjust font size */
-  font-weight: bold; /* Emphasize the name */
-  color: #333; /* Dark text color */
-}
-
-.profile-link {
-  text-decoration: none; /* Remove underline */
-  color: #034790; /* Add link color */
-  transition: color 0.3s ease; /* Smooth color change on hover */
-}
-
-.profile-link:hover {
-  color: #0056b3; /* Darker color on hover */
 }
 
 
