@@ -28,31 +28,57 @@ body {
   padding: 0;
 }
 
+
+/*############################# ###################### */
+/*########################### Header ################  */
+/*################################################## */
   /* Container for the image and navbar */
 .navbar-container {
   position: relative; 
-  max-width: 1000px;  
-  min-width: 1000px;
-  min-height: 400px;
+  max-width: 1300px;  
+  min-width: 1300px;
+  min-height: 350px;
   margin: 0 auto;
+}
+
+.research-container {
+  position: relative; 
+  max-width: 1300px;  
+  min-width: 1300px;
+  margin: 0 auto;
+  min-height: 50px;
+}
+
+.research-links {
+  margin-top: 3.5rem; /* Add space on top */
+  margin-left: 1.5rem;
+  justify-content: left;
+  font-family: "trajan-pro-3", serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
 }
 
 /* Half-image that the navbar overlays */
 .header-image {
-  margin-top: 55px;
-  width: 100%; /* Full width of the navbar length */
+  margin-top: 95px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 90%; /* Full width of the navbar length */
   object-fit: cover; /* Ensures the image scales nicely */
 }
 
 .links-container {
   position: relative; 
-  max-width: 1000px;  
-  min-width: 1000px;
+  max-width: 1300px;  
+  min-width: 1300px;
   margin: 0 auto;
 }
 
 .hero-links {
-  margin-top: 2.5rem;
+  margin-top: 1rem;
+
   display: flex;
   justify-content: center;
   gap: 2.5rem;                 /* space between items */
@@ -62,26 +88,63 @@ body {
   font-size: 1.1rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  text-decoration: underline;
+  font-size: 23px;
 }
 
 .hero-links a {
   color: #000;
   text-decoration: underline;
-  font-size: 23px;
+  font-size: 20px;
   font-family: "trajan-pro-3", serif;
   font-weight: 600;
   font-style: normal;
 }
 
-.hero-links a:hover {
-  opacity: 0.7;                /* subtle hover effect */
+.hero-header-container {
+  position: relative; 
+  max-width: 1300px;  
+  min-width: 1300px;
+  margin: 0 auto;
 }
 
+.hero-header {
+  position: relative;          /* you probably already have this */
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 3rem 2rem;
+  overflow: hidden;
+}
+
+/* bottom-right text */
+.hero-meta {
+  position: absolute;
+  right: 4.5rem;
+  bottom: 4rem;
+  text-align: right;
+  text-transform: uppercase;
+  font-weight: 1000;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  z-index: 3;                  /* above triangles + background text */
+}
+
+.hero-meta-title {
+  font-size: 0.95rem;
+  font-weight: 1000;
+  font-family: "trajan-pro-3", serif;
+}
+
+.hero-meta-subtitle {
+  font-size: 0.75rem;
+  font-family: "adobe-garamond-pro", serif;
+}
 
 .about-section {
-  max-width: 950px;
+  max-width: 1000px;
   margin: 4rem auto 0;          /* space below header/links */
-  font-family: "Times New Roman", Georgia, serif;
+  font-family: "trajan-pro-3", serif;
   font-size: 1.1rem;
   line-height: 1.7;
 }
@@ -95,6 +158,7 @@ body {
   letter-spacing: 0.08em;
   font-weight: 700;
   margin-bottom: 1.8rem;
+  font-family: "trajan-pro-3", serif;
 }
 
 /* paragraph text */
@@ -103,13 +167,21 @@ body {
   font-family: "adobe-garamond-pro", serif;
   font-weight: 900;
   font-style: normal;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+}
+
+.about-text-xinxi {
+  text-align: justify;
+  font-family: "trajan-pro-3", serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1.4rem;
 }
 
 /* drop cap first letter */
 .dropcap {
   font-family: "trajan-pro-3", serif;
-  font-weight: 100;
+  font-weight: 1000;
   float: left;
   font-size: 3.2rem;
   line-height: 0.2;
@@ -119,7 +191,7 @@ body {
 /* links inside about text */
 .about-text a {
   color: #000;
-  font-family: "Didot";
+  font-family: "adobe-garamond-pro", serif;
   text-decoration: underline;
 }
 .about-text a:hover {
@@ -127,13 +199,10 @@ body {
 }
 
 
-
-
-
 .section-bar-container {
   position: relative; 
   max-width: 1300px;  
-  min-width: 1000px;
+  min-width: 1300px;
   margin: 10px auto;
   margin-top: 50px;
 }
@@ -166,87 +235,84 @@ body {
 
 /* Publications Section */
 
-/* Ensure .pub-container expands to fit the floated image */
-.pub-container::after {
-  content: "";
-  display: block;
-  clear: both;
+/* reuse the boxed label style for multiple sections */
+.section-label,
+.about-label {
+  display: inline-block;
+  padding: 0.4rem 1.8rem;
+  border: 2px solid #000;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  margin-bottom: 1.8rem;
 }
 
-.pub-container {
+
+/* projects section */
+.projects-section {
   max-width: 1300px;
-  min-width: 1000px;
-  margin: 10px auto;
-  background-color: rgba(254, 253, 253, 0.995);
-  padding: 30px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  border-left: 5px solid #15161780;
-  gap: 20px; /* Space between image and text */
-
-  h1 {
-    font-size: 20px;
-    font-weight: bold;
-    color: #034790;
-    margin-bottom: 15px;
-
-    a {
-      color: #034790;
-    }
-  }
-
-  h2 {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 5px;   
-  }
-
-  p {
-    text-align: justify;
-    line-height: 1.6;
-
-    hl {
-      text-align: justify;
-      background-color: rgba(206, 126, 5, 0.445);
-      line-height: 1.6;
-    } /* To highlight some text */
-  }
+  margin: 1rem auto 0;
+  font-family: "Times New Roman", Georgia, serif;
 }
 
-/* Image - Ensures Text Wraps */
-.pub-image {
-  width: 300px; /* Set a reasonable size */
-  height: auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  object-fit: cover;
-  float: left;
-  margin-right: 15px;
-}        
-
-/* Keywords Section */
-.pub-keywords {
+/* stack project cards vertically */
+.project-grid {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
+  flex-direction: column;
+  gap: 0.0rem;
 }
 
-/* Individual Keyword Styling */
-.pub-keyword {
-  background-color: #eef0f2;
-  padding: 6px 12px;
-  font-size: 14px;
-  font-weight: 600;
-  white-space: nowrap;
+/* each card: image left, text right */
+.project-card {
+  display: flex;
+  gap: 1.8rem;
+  padding: 1.5rem;
 }
 
-.toggle-abstract {
-  color: #034790;
-  cursor: pointer;
-  font-weight: bold;
+/* thumbnail */
+.project-thumb {
+  flex: 0 0 300px;
+}
+
+.project-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* text area */
+.project-body {
+  flex: 1;
+}
+
+.project-body h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.1rem;
+  font-family: "trajan-pro-3", serif;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.project-body p {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-family: "adobe-garamond-pro", serif;
+}
+
+/* button-style link */
+.project-link {
+  display: inline-block;
+  padding: 0.35rem 1.5rem;
+  border: 1px solid #000;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.82rem;
   text-decoration: none;
+  color: #000;
 }
 
-.toggle-abstract:hover {
-  text-decoration: underline;
+.project-link:hover {
+  background: #000;
+  color: #fff;
 }
-

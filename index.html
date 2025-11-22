@@ -23,13 +23,20 @@
 <script src="script.js"></script>
 <body>
 
-
-
   <!-- ******************************************************* -->
   <!-- ************* Header Section ************************** -->
   <!-- ******************************************************* -->
   <div class="navbar-container">
-  <img src="data/images/header.jpg" alt="Header Image" class="header-image">
+  <img src="data/images/header.png" alt="Header Image" class="header-image">
+  </div>
+
+  <div class="hero-header-container">
+      <div class="hero-header">
+        <div class="hero-meta">
+          <div class="hero-meta-title">The Inside of My Head</div>
+          <div class="hero-meta-subtitle">Last Updated Nov 22, 2025</div>
+        </div>
+      </div>
   </div>
 
   <div class="links-container">
@@ -45,15 +52,65 @@
     <!-- <div class="about-label">ABOUT ME</div> -->
   
     <p class="about-text">
-      <span class="dropcap">H</span>ello, I am Xinxi Zhang, a PhD student in the Department of
+      Hello, I am Xinxi Zhang, a PhD student in the Department of
       Computer Science at Rutgers University, advised by
-      <a href="https://www.cs.rutgers.edu/~vladimir/" target="_blank">
+      <a href="https://www.cs.rutgers.edu/people/professors/details/vladimir-pavlovic" target="_blank">
         Prof. Vladimir Pavlovic
-      </a>. Echoing Richard Feynman’s belief that “what I cannot create,
+      </a>. Echoing Richard Feynman’s quote that “what I cannot create,
       I do not understand,” I work at the intersection of generative
       modeling and computer vision, with a current focus on building more
       efficient diffusion and flow-based models for visual generation.
     </p>
+  </section>
+
+  <div class="research-container">
+    <nav class="research-links">
+      RESEARCH PROJECTS
+    </nav>
+  </div>  
+
+  <section class="projects-section" id="projects">
+  
+    <div class="project-grid">
+
+      <article class="project-card">
+        <div class="project-thumb">
+          <img src="data/images/pubs/REMF.jpg" alt="Re-Meanflow">
+        </div>
+        <div class="project-body">
+          <h3>Flow Straighter and Faster: Efficient One-Step Generative Modeling via Meanflow on Rectified Trajectories </h3>
+          <p>
+            Learning mean velocities along rectified trajectories to enable
+            one-step sampling with competitive generation quality under strict
+            compute budgets.
+          </p>
+          <a class="project-link" href="https://arxiv.org/your_meanflow_link" target="_blank">
+            VIEW PROJECT
+          </a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-thumb">
+          <img src="data/images/pubs/SODA.jpg" alt="SODA">
+        </div>
+        <div class="project-body">
+          <h3>SODA: Spectral Orthogonal Decomposition Adaptation for Diffusion Models</h3>
+          <p>
+            Spectrum-aware parameter-efficient fine-tuning framework for generative
+            models that adapts singular values and basis vectors, enabling efficient
+            diffusion and flow-based generative modeling.
+          </p>
+          <a class="project-link" href="https://arxiv.org/your_soda_link" target="_blank">
+            VIEW PROJECT
+          </a>
+        </div>
+      </article>
+  
+      <!-- Project 2 -->
+      
+  
+    </div>
   </section>
   
 
