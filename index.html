@@ -58,7 +58,7 @@
         Prof. Vladimir Pavlovic
       </a> and also has the fortune to work with <a href="https://www.cs.rutgers.edu/people/professors/details/dimitris-metaxas" target="_blank">
         Prof. Dimitris Metaxas
-      </a>.Echoing Richard Feynman’s quote that “what I cannot create,
+      </a>. Echoing Richard Feynman’s quote that “what I cannot create,
       I do not understand,” I work at the intersection of generative
       modeling and computer vision, with a current focus on building more
       efficient diffusion and flow-based models for visual generation.
@@ -82,15 +82,21 @@
         <div class="project-body">
           <h3>Flow Straighter and Faster: Efficient One-Step Generative Modeling via Meanflow on Rectified Trajectories </h3>
           <p class="project-authors">
-            <strong style="text-decoration: underline;"> Xinxi Zhang</strong>*, Shiwei Tan*, Quang Nguyen, Quan Dao, Ligong Han, Xiaoxiao He, Tunyu Zhang, Alen Mrdovic, Dimitris N. Metaxas
+            <strong style="text-decoration: underline;"> Xinxi Zhang</strong>*, Shiwei Tan*, Quang Nguyen, Quan Dao, Ligong Han, Xiaoxiao He, Tunyu Zhang, Alen Mrdovic, Dimitris Metaxas
           </p>
           <p>
-            Learning mean velocities along rectified trajectories to enable
-            one-step sampling with competitive generation quality under strict
-            compute budgets.
+            Re-MeanFlow enables efficient one-step generative modeling by learning mean velocities along rectified trajectories. 
+            By organically combining MeanFlow with trajectory rectification, it yields complementary strengths that neither component achieves alone. 
+            We demonstrate its generality and effectiveness on ImageNet under various settings, where Re-MeanFlow consistently outperforms previous one-step flow-based methods.
           </p>
           <a class="project-link" href="https://arxiv.org/your_meanflow_link" target="_blank">
-            VIEW PROJECT (COMING SOON)
+            Paper (COMING SOON)
+          </a>
+          <a class="project-tag">
+            ONE-STEP GENERATION
+          </a>
+          <a class="project-tag">
+            EFFICIENT TRAINING
           </a>
         </div>
       </article>
@@ -105,12 +111,18 @@
             <strong style="text-decoration: underline;"> Xinxi Zhang</strong>*, Song Wen*, Ligong Han*, Felix Juefei-Xu, Akash Srivastava, Junzhou Huang, Hao Wang, Molei Tao, Vladimir Pavlovic, Dimitris Metaxas
           </p>
           <p>
-            Spectrum-aware parameter-efficient fine-tuning framework for generative
-            models that adapts singular values and basis vectors, enabling efficient
-            diffusion and flow-based generative modeling.
+            SODA is a spectrum-aware, parameter-efficient fine-tuning framework for diffusion models. 
+            We demonstrate its effectiveness on the task of personalizing text-to-image diffusion models: 
+            given only a few images of an object, SODA can generate novel scenes of the object controlled by text prompts, using only a lightweight fine-tuning stage.
           </p>
           <a class="project-link" href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10944068" target="_blank">
             PAPER (WACV 2025)
+          </a>
+          <a class="project-tag">
+            DIFFUSION PERSONALIZATION
+          </a>
+          <a class="project-tag">
+            PARAMETER-EFFICIENT FINE-TUNING
           </a>
         </div>
       </article>      

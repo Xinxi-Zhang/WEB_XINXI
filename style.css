@@ -101,6 +101,11 @@ body {
   font-style: normal;
 }
 
+.hero-links a:hover {
+  background: #000;
+  color: #fff;
+}
+
 .hero-header-container {
   position: relative; 
   max-width: 1300px;  
@@ -194,8 +199,12 @@ body {
   font-family: "adobe-garamond-pro", serif;
   text-decoration: underline;
 }
-.about-text a:hover {
+.about-text a {
   opacity: 0.75;
+}
+.about-text a:hover {
+  background: #000;
+  color: #fff;
 }
 
 
@@ -295,7 +304,7 @@ body {
 
 .project-body p {
   margin: 0 0 1rem;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   font-family: "adobe-garamond-pro", serif;
 }
@@ -308,8 +317,8 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-size: 0.82rem;
-  text-decoration: none;
   color: #000;
+  text-decoration: underline;
 }
 
 .project-link:hover {
@@ -320,4 +329,14 @@ body {
   margin: 0 0 0.4rem;
   font-size: 0.9rem;
   font-style: italic;
+}
+
+.project-tag {
+  display: inline-block;
+  padding: 0.35rem 1.5rem;
+  border: 1px solid #000;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.82rem;
+  color: #000;
 }
