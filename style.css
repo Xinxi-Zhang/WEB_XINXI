@@ -49,6 +49,13 @@ body {
   min-height: 50px;
 }
 
+.links-container {
+  position: relative; 
+  max-width: 1300px;  
+  min-width: 1300px;
+  margin: 0 auto;
+}
+
 .research-links {
   margin-top: 6.6rem; /* Add space on top */
   margin-left: 1.5rem;
@@ -69,12 +76,7 @@ body {
   object-fit: cover; /* Ensures the image scales nicely */
 }
 
-.links-container {
-  position: relative; 
-  max-width: 1300px;  
-  min-width: 1300px;
-  margin: 0 auto;
-}
+
 
 .hero-links {
   margin-top: 1rem;
@@ -115,9 +117,7 @@ body {
 
 .hero-header {
   position: relative;          /* you probably already have this */
-  width: 100%;
-  height: 100%;
-  padding: 3rem 2rem;
+  padding: 3rem;
 }
 
 /* bottom-right text */
@@ -259,7 +259,6 @@ body {
 .projects-section {
   max-width: 1300px;
   margin: 1rem auto 0;
-  font-family: "Times New Roman", Georgia, serif;
 }
 
 /* stack project cards vertically */
@@ -345,17 +344,38 @@ body {
   /* Make all main containers fluid instead of 1300px fixed */
   .navbar-container,
   .hero-header-container,
-  .links-container,
-  .research-container,
-  .section-bar-container,
-  .about-section,
-  .projects-section{
+  .section-bar-container{
     max-width: 100%;
     min-width: 0;
     margin: 0 auto;
     padding: 0 1rem;  /* side padding so content isn't glued to edges */
   }
-  
+
+  .about-section{
+    max-width: 90%;
+    min-width: 0;
+    margin: 0 auto;
+    padding: 0 1rem;  /* side padding so content isn't glued to edges */
+  }
+  .projects-section{
+    max-width: 85%;
+    min-width: 0;
+    margin: 0 auto;
+    padding: 0 1rem;  /* side padding so content isn't glued to edges */
+  }
+
+  .links-container {
+    max-width: 100%;
+    min-width: 0;
+    margin-top: -2rem; /* Move links-container up to reduce space above */
+  }
+
+  .research-container{
+    max-width: 100%;
+    min-width: 0;
+    margin-top: 3rem; 
+    padding: 0 1rem;  
+  }
 
   /* Header image: full width, less top gap */
   .header-image {
@@ -369,7 +389,7 @@ body {
     margin-top: 2rem;
     margin-left: 0;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   /* Links under the hero: wrap and shrink a bit */
@@ -382,12 +402,11 @@ body {
   }
 
   .hero-links a {
-    font-size: 0.85rem;
+    font-size: 1.05rem;
   }
 
-  /* Hero meta text: no absolute bottom-right on small screens */
   .hero-header {
-    padding: 0rem 0rem 0;
+    margin-top: 1.5rem;
   }
 
   .hero-meta {
@@ -409,7 +428,7 @@ body {
   }
 
   .about-text {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.6;
   }
 
