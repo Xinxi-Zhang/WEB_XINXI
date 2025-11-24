@@ -117,9 +117,7 @@ body {
   position: relative;          /* you probably already have this */
   width: 100%;
   height: 100%;
-  box-sizing: border-box;
   padding: 3rem 2rem;
-  overflow: hidden;
 }
 
 /* bottom-right text */
@@ -350,13 +348,14 @@ body {
   .links-container,
   .research-container,
   .section-bar-container,
-  .projects-section,
-  .about-section {
+  .about-section,
+  .projects-section{
     max-width: 100%;
     min-width: 0;
     margin: 0 auto;
     padding: 0 1rem;  /* side padding so content isn't glued to edges */
   }
+  
 
   /* Header image: full width, less top gap */
   .header-image {
@@ -388,13 +387,12 @@ body {
 
   /* Hero meta text: no absolute bottom-right on small screens */
   .hero-header {
-    padding: 1.5rem 1rem 0;
+    padding: 0rem 0rem 0;
   }
 
   .hero-meta {
-    position: static;
-    text-align: left;
-    margin-top: 1rem;
+    right: 0rem;
+    text-align: right;
   }
 
   .hero-meta-title {
