@@ -367,7 +367,9 @@ body {
   .links-container {
     max-width: 100%;
     min-width: 0;
-    margin-top: -2rem; /* Move links-container up to reduce space above */
+    /* Use clamp to keep a consistent absolute gap between the header image and links, 
+       but allow some responsiveness for tiny screens */
+    margin-top: clamp(-80px, -16vw, -116rem); /* Reduced gap for more compact spacing */
   }
 
   .research-container{
@@ -415,11 +417,11 @@ body {
   }
 
   .hero-meta-title {
-    font-size: 0.9rem;
+    font-size: clamp(0.6rem, 2vw, 0.9rem);
   }
 
   .hero-meta-subtitle {
-    font-size: 0.75rem;
+    font-size: clamp(0.44rem, 1.6vw, 0.75rem);
   }
 
   /* About section: slightly smaller text, less top margin */
