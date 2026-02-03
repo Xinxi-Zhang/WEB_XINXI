@@ -196,10 +196,9 @@ body {
   color: #000;
   font-family: "adobe-garamond-pro", serif;
   text-decoration: underline;
-}
-.about-text a {
   opacity: 0.75;
 }
+
 .about-text a:hover {
   background: #000;
   color: #fff;
@@ -304,6 +303,37 @@ body {
   font-size: 1.2rem;
   line-height: 1.6;
   font-family: "adobe-garamond-pro", serif;
+}
+
+.project-authors a {
+  color: #000;
+  font-family: "adobe-garamond-pro", serif;
+  text-decoration: underline;
+  opacity: 0.75;
+}
+
+.project-authors a:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* default author links (optional, if you want them all consistent) */
+.project-authors a.author-link {
+  text-decoration: underline;
+}
+
+/* highlight you */
+.project-authors a.author-link.is-me {
+  color: #DB3E26;
+  text-decoration: underline;
+  font-weight: 700; /* optional, mimics <strong> */
+  opacity: 1;       /* so it doesn't look faded */
+}
+
+/* hover state for you (optional) */
+.project-authors a.author-link.is-me:hover {
+  background: #DB3E26;
+  color: #fff;
 }
 
 /* button-style link */
