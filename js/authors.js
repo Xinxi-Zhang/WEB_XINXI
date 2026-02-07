@@ -1,5 +1,5 @@
 const AUTHOR_URL = {
-    "xinxi-zhang": "https://your-site.com/xinxi",
+    "xinxi-zhang": "https://scholar.google.com/citations?user=08KI_O0AAAAJ&hl=en",
     "song-wen": "https://scholar.google.com/citations?user=yTQbz6AAAAAJ&hl=en",
     "ligong-han": "https://scholar.google.com/citations?user=n2v43R4AAAAJ&hl=en",
     "felix-juefei-xu": "https://scholar.google.com/citations?user=dgN8vtwAAAAJ&hl=en",
