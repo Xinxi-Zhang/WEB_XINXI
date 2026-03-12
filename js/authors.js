@@ -19,6 +19,7 @@ const AUTHOR_URL = {
     "quang-nguyen": "https://scholar.google.com/citations?user=SUuo7U4AAAAJ&hl=en",
     "quan-dao": "https://scholar.google.com/citations?user=g0RS3_kAAAAJ&hl=en",
     "alen-mrdovic": "https://www.linkedin.com/in/alen-mrdovic-615b881b6/",
+    "chengzhi-mao": "https://scholar.google.com/citations?user=pTTEiHUAAAAJ&hl=en",
   };
   
   // linkify any <p class="project-authors"> that contains plain names
